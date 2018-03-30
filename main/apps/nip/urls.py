@@ -7,4 +7,7 @@ urlpatterns = [
     url(r'^strengths/?$', views.strength),
     url(r'^socials/?$', views.socials),
     url(r'^socials_process/?$', views.socials_process), 
+    url(r'^process/?$', views.process), 
+    url(r'^home/?$', views.home), 
+    
 ]

@@ -77,6 +77,15 @@ def socials_process(request):
 	user.save()
  	return redirect('/socials')
 
+def home(request):
+	return render(request,'nip/home.html')	 
+
+def process(request):
+	if request.method == "POST":
+		user = User.objects.get(id=request.session["id"])
+		for id in request.POST.getlist['sCheck']:
+			user.strengths.add(id=id)	 
+		return redirect('/home')
 
 
 
